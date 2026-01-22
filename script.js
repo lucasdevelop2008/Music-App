@@ -148,7 +148,10 @@ function init() {
     }
 }
 
+
 function setupLoginEventListeners() {
+    if (!loginTabs || loginTabs.length === 0) return;
+    
     loginTabs.forEach(tab => {
         tab.addEventListener('click', (e) => {
             const tabName = tab.dataset.tab;
@@ -160,39 +163,70 @@ function setupLoginEventListeners() {
             });
             
             if (tabName === 'login') {
-                loginForm.classList.add('active');
+                if (loginForm) loginForm.classList.add('active');
             } else {
-                signupForm.classList.add('active');
+                if (signupForm) signupForm.classList.add('active');
             }
         });
     });
 
-    loginForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const email = document.getElementById('login-email').value;
-        const password = document.getElementById('login-password').value;
-        
-        if (email === 'user@music.com' && password === '123456') {
-            loginUser(email);
-        } else {
-            alert('Email ou senha incorretos. Use: user@music.com / 123456');
-        }
-    });
+    if (loginForm) {
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('login-email')?.value;
+            const password = document.getElementById('login-password')?.value;
+            
+            // Verificar se existe usuário com essas credenciais no localStorage
+            const savedUsers = JSON.parse(localStorage.getItem('savedUsers') || '[]');
+            const user = savedUsers.find(u => u.email === email && u.password === password);
+            
+            if (user) {
+                loginUser(email, user.name);
+            } else if (email === 'user@music.com' && password === '123456') {
+                // Usuário de teste padrão
+                loginUser(email);
+            } else {
+                alert('Email ou senha incorretos!');
+            }
+        });
+    }
 
-    signupForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = document.getElementById('signup-name').value;
-        const email = document.getElementById('signup-email').value;
-        const password = document.getElementById('signup-password').value;
-        const confirm = document.getElementById('signup-confirm').value;
-        
-        if (password !== confirm) {
-            alert('As senhas não coincidem');
-            return;
-        }
-        
-        loginUser(email, name);
-    });
+    if (signupForm) {
+        signupForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('signup-name')?.value;
+            const email = document.getElementById('signup-email')?.value;
+            const password = document.getElementById('signup-password')?.value;
+            const confirm = document.getElementById('signup-confirm')?.value;
+            
+            if (!name || !email || !password) {
+                alert('Preencha todos os campos!');
+                return;
+            }
+            
+            if (password !== confirm) {
+                alert('As senhas não coincidem');
+                return;
+            }
+            
+            // Salvar usuário
+            const savedUsers = JSON.parse(localStorage.getItem('savedUsers') || '[]');
+            
+            // Verificar se já existe
+            if (savedUsers.find(u => u.email === email)) {
+                alert('Este email já está registrado!');
+                return;
+            }
+            
+            // Adicionar novo usuário
+            savedUsers.push({ email, password, name });
+            localStorage.setItem('savedUsers', JSON.stringify(savedUsers));
+            
+            // Fazer login
+            loginUser(email, name);
+            alert('Conta criada com sucesso!');
+        });
+    }
 }
 
 function loginUser(email, name = 'Usuário') {
