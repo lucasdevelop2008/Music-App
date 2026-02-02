@@ -1,22 +1,21 @@
-# 📦 TechStore --- Sistema de Cadastro de Produtos (CRUD)
+# 🎵 Music App --- Player de Música Web
 
-TechStore é um **sistema web simples de cadastro de produtos**,
-desenvolvido para praticar as operações fundamentais de um CRUD (Create,
-Read, Update, Delete) utilizando apenas tecnologias front-end.
+Music App é um aplicativo web de reprodução de músicas com interface
+interativa, permitindo que usuários naveguem por músicas, criem
+playlists e controlem a reprodução diretamente no navegador.
 
-O projeto simula um pequeno sistema de gerenciamento de produtos, ideal
-para estudos, portfólio e demonstração de habilidades em JavaScript.
+Projeto desenvolvido com foco em praticar **HTML, CSS e JavaScript**,
+explorando construção de interfaces e lógica de player.
 
 ------------------------------------------------------------------------
 
 ## ✨ Funcionalidades
 
--   ➕ Cadastrar novos produtos\
--   📋 Listar produtos em tabela\
--   ✏️ Editar produtos cadastrados\
--   🗑️ Excluir produtos\
--   🧠 Manipulação dinâmica do DOM\
--   💾 Persistência local (caso utilize LocalStorage)
+-   🎧 Reprodução de músicas
+-   ⏯ Controles de play, pause, próxima e anterior
+-   📂 Listagem de músicas
+-   📱 Interface responsiva
+-   🎨 Layout moderno
 
 ------------------------------------------------------------------------
 
@@ -30,11 +29,15 @@ para estudos, portfólio e demonstração de habilidades em JavaScript.
 
 ## 📁 Estrutura de Arquivos
 
-    TechStore---Sistema-de-CRUD/
+    Music-App/
     │
     ├── index.html
     ├── style.css
-    └── script.js
+    ├── script.js
+    ├── assets/
+    │   ├── musics/
+    │   └── images/
+    └── README.md
 
 ------------------------------------------------------------------------
 
@@ -45,61 +48,59 @@ para estudos, portfólio e demonstração de habilidades em JavaScript.
 ```{=html}
 <!-- -->
 ```
-    git clone https://github.com/lucasdevelop2008/TechStore---Sistema-de-CRUD.git
+    git clone https://github.com/lucasdevelop2008/Music-App.git
 
-2.  Acesse a pasta do projeto:
+2.  Entre na pasta:
 
 ```{=html}
 <!-- -->
 ```
-    cd TechStore---Sistema-de-CRUD
+    cd Music-App
 
-3.  Abra o arquivo `index.html` no navegador:
+3.  Abra o arquivo:
 
--   Clique duas vezes no arquivo\
-    OU\
--   Utilize a extensão Live Server no VS Code
+```{=html}
+<!-- -->
+```
+    index.html
+
+Ou utilize a extensão **Live Server** no VS Code.
 
 ------------------------------------------------------------------------
 
 ## 🖥️ Como Usar
 
-1.  Preencha o formulário com os dados do produto\
-2.  Clique em **Cadastrar**\
-3.  O produto aparecerá na tabela\
-4.  Utilize os botões para **editar** ou **excluir**
+1.  Abra o projeto no navegador\
+2.  Escolha uma música\
+3.  Clique em Play\
+4.  Utilize os controles para navegar entre faixas
 
 ------------------------------------------------------------------------
 
-## 📸 Screenshots
-
-Adicione imagens da interface do projeto nesta seção.
-
-Exemplo:
+## 📸 Screenshots (Opcional)
 
     /screenshots
        ├── home.png
-       ├── cadastro.png
-       └── lista.png
+       ├── player.png
 
 No README:
 
-    ![Tela Inicial](screenshots/home.png)
-    ![Cadastro de Produto](screenshots/cadastro.png)
+    ![Home](screenshots/home.png)
+    ![Player](screenshots/player.png)
 
 ------------------------------------------------------------------------
 
 ## 🎯 Objetivo do Projeto
 
-Este projeto foi criado com fins educacionais, visando:
+Projeto criado para estudo e prática de:
 
--   Praticar lógica de programação\
 -   Manipulação do DOM\
--   Organização de código\
--   Estruturação de projetos front-end
+-   Estruturação de layouts\
+-   Lógica de player de áudio\
+-   Organização de projeto
 
 ------------------------------------------------------------------------
 
 ## 🔗 Acesso ao Projeto Online
 
-👉 https://lucasdevelop2008.github.io/TechStore---Sistema-de-CRUD/
+👉 https://lucasdevelop2008.github.io/Music-App/
