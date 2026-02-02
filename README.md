@@ -62,9 +62,10 @@ explorando construção de interfaces e lógica de player.
 3.  Abra o arquivo:
 
 ```{=html}
-<!-- -->
-```
+
     index.html
+
+```
 
 Ou utilize a extensão **Live Server** no VS Code.
 
