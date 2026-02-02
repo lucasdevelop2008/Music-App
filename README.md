@@ -46,16 +46,18 @@ explorando construção de interfaces e lógica de player.
 1.  Clone o repositório:
 
 ```{=html}
-<!-- -->
-```
+
     git clone https://github.com/lucasdevelop2008/Music-App.git
+
+```
 
 2.  Entre na pasta:
 
 ```{=html}
-<!-- -->
-```
+
     cd Music-App
+
+```
 
 3.  Abra o arquivo:
 
