@@ -21,8 +21,8 @@ explorando construção de interfaces e lógica de player.
 
 ## 🧱 Tecnologias Utilizadas
 
--   HTML5\
--   CSS3\
+-   HTML5
+-   CSS3
 -   JavaScript (Vanilla JS)
 
 ------------------------------------------------------------------------
@@ -73,9 +73,9 @@ Ou utilize a extensão **Live Server** no VS Code.
 
 ## 🖥️ Como Usar
 
-1.  Abra o projeto no navegador\
-2.  Escolha uma música\
-3.  Clique em Play\
+1.  Abra o projeto no navegador
+2.  Escolha uma música
+3.  Clique em Play
 4.  Utilize os controles para navegar entre faixas
 
 ------------------------------------------------------------------------
@@ -97,9 +97,9 @@ No README:
 
 Projeto criado para estudo e prática de:
 
--   Manipulação do DOM\
--   Estruturação de layouts\
--   Lógica de player de áudio\
+-   Manipulação do DOM
+-   Estruturação de layouts
+-   Lógica de player de áudio
 -   Organização de projeto
 
 ------------------------------------------------------------------------
